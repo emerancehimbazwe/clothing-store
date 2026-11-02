@@ -1,3 +1,4 @@
+
 /* GENERAL RESET */
 * {
     margin: 0;
@@ -195,7 +196,7 @@ body {
     border-left-color: #111111;
 }
 
-/* NAVIGATION KEYBOARD ACCESSIBILITY */
+/* NAVIGATION ACCESSIBILITY */
 .sidebar-navigation a:focus-visible,
 .category-dropdown > label:focus-visible {
     outline: 2px solid #111111;
@@ -286,34 +287,52 @@ body {
 
 /* PRODUCT SECTION */
 .product-section {
-    padding: 0 24px;
+    padding: 24px;
+}
+
+.section-header {
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 22px;
+    font-weight: 500;
 }
 
 .section-header p {
-    margin: 16px 0;
+    margin-top: 6px;
     color: #666666;
+    font-size: 14px;
 }
 
+/* IMPROVED PRODUCT GRID */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 16px;
+    column-gap: 20px;
+    row-gap: 32px;
+    align-items: start;
 }
 
 .product-card {
     min-width: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .product-card figure {
     position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
     margin: 0;
     overflow: hidden;
+    background-color: #f5f5f5;
 }
 
 .product-card img {
     display: block;
     width: 100%;
-    height: 280px;
+    height: 100%;
     object-fit: cover;
     filter: contrast(115%) brightness(95%) saturate(75%) sepia(5%);
     transition: transform 0.3s ease;
@@ -324,7 +343,7 @@ body {
 }
 
 .product-info {
-    padding: 8px 0 20px;
+    padding: 12px 0 4px;
 }
 
 .product-info h2,
@@ -332,6 +351,7 @@ body {
     margin: 0 0 6px;
     font-size: 15px;
     font-weight: 400;
+    line-height: 1.4;
 }
 
 .product-price {
@@ -504,10 +524,8 @@ body {
 
     .product-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .product-card img {
-        height: 300px;
+        column-gap: 18px;
+        row-gap: 28px;
     }
 
     .hero-section img {
@@ -604,16 +622,13 @@ body {
     }
 
     .product-section {
-        padding: 0 16px;
+        padding: 20px 16px;
     }
 
     .product-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-    }
-
-    .product-card img {
-        height: 240px;
+        column-gap: 14px;
+        row-gap: 24px;
     }
 
     .newsletter-section {
@@ -657,8 +672,9 @@ body {
         font-size: 14px;
     }
 
-    .product-card img {
-        height: 200px;
+    .product-grid {
+        column-gap: 10px;
+        row-gap: 20px;
     }
 
     .product-info h2,
