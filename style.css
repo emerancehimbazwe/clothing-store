@@ -1,4 +1,3 @@
-
 /* GENERAL RESET */
 * {
     margin: 0;
@@ -15,6 +14,24 @@ body {
     color: #111111;
     font-family: "Montserrat", Arial, sans-serif;
     line-height: 1.6;
+}
+
+/* ACCESSIBLE SKIP LINK */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    z-index: 2000;
+    padding: 12px 18px;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 16px;
 }
 
 /* MOBILE HEADER */
@@ -85,13 +102,18 @@ body {
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+    border-left: 3px solid transparent;
 }
 
 .category-list > li > a:hover,
 .category-dropdown > label:hover {
     background-color: #f1f1f1;
     color: #111111;
+    border-left-color: #111111;
 }
 
 /* CATEGORY DROPDOWN */
@@ -141,6 +163,13 @@ body {
     color: #111111;
 }
 
+.subcategory-list a:focus-visible {
+    outline: 2px solid #111111;
+    outline-offset: -2px;
+    background-color: #eeeeee;
+    color: #111111;
+}
+
 /* SECONDARY NAVIGATION */
 .secondary-navigation {
     margin-top: 24px;
@@ -153,10 +182,25 @@ body {
     color: #666666;
     text-decoration: none;
     font-size: 16px;
+    border-left: 3px solid transparent;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .secondary-navigation a:hover {
     background-color: #f1f1f1;
+    color: #111111;
+    border-left-color: #111111;
+}
+
+/* NAVIGATION KEYBOARD ACCESSIBILITY */
+.sidebar-navigation a:focus-visible,
+.category-dropdown > label:focus-visible {
+    outline: 2px solid #111111;
+    outline-offset: -2px;
+    background-color: #eeeeee;
     color: #111111;
 }
 
@@ -283,7 +327,8 @@ body {
     padding: 8px 0 20px;
 }
 
-.product-info h2 {
+.product-info h2,
+.product-info h3 {
     margin: 0 0 6px;
     font-size: 15px;
     font-weight: 400;
@@ -506,6 +551,11 @@ body {
         font-size: 14px;
     }
 
+    .sidebar-navigation a,
+    .category-dropdown > label {
+        min-height: 44px;
+    }
+
     .subcategory-list {
         background-color: #f8f8f8;
     }
@@ -574,6 +624,10 @@ body {
         grid-template-columns: repeat(2, 1fr);
         padding: 32px 20px;
     }
+
+    .skip-link {
+        left: 8px;
+    }
 }
 
 /* SMALL MOBILE SCREENS */
@@ -607,7 +661,8 @@ body {
         height: 200px;
     }
 
-    .product-info h2 {
+    .product-info h2,
+    .product-info h3 {
         font-size: 13px;
     }
 
