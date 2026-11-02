@@ -9,18 +9,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="top">
+
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
     <!-- Mobile Header -->
     <header class="mobile-header">
-        <a href="#" class="mobile-logo">LOGO</a>
+        <a href="#top" class="mobile-logo">LOGO</a>
     </header>
 
     <!-- Sidebar -->
     <aside class="sidebar">
 
         <header class="sidebar-header">
-            <a href="#" class="logo">LOGO</a>
+            <a href="#top" class="logo">LOGO</a>
         </header>
 
         <nav class="sidebar-navigation" aria-label="Main navigation">
@@ -61,7 +63,7 @@
     </aside>
 
     <!-- Main Content -->
-    <main class="main-content">
+    <main class="main-content" id="main-content">
 
         <!-- Page Header -->
         <header class="page-header">
@@ -74,14 +76,16 @@
         </header>
 
         <!-- Hero Section -->
-        <section class="hero-section">
+        <section class="hero-section" aria-labelledby="hero-title">
 
-            <img src="images/jeans.jpg"
-                 alt="Featured jeans collection"
-                 class="hero-image">
+            <img
+                src="images/jeans.jpg"
+                alt="Featured jeans collection"
+                class="hero-image"
+            >
 
             <div class="hero-content">
-                <h2>New Arrivals</h2>
+                <h2 id="hero-title">New Arrivals</h2>
                 <p>COLLECTION 2016</p>
                 <a href="#product" class="btn">SHOP NOW</a>
             </div>
@@ -89,9 +93,14 @@
         </section>
 
         <!-- Products Section -->
-        <section class="product-section" id="product">
+        <section
+            class="product-section"
+            id="product"
+            aria-labelledby="product-title"
+        >
 
             <header class="section-header">
+                <h2 id="product-title">Our Jeans Collection</h2>
                 <p>8 items</p>
             </header>
 
@@ -100,13 +109,15 @@
                 <!-- Product 1 -->
                 <article class="product-card">
                     <figure>
-                        <img src="images/jeans1.jpg"
-                             alt="Ripped skinny jeans"
-                             class="product-image">
+                        <img
+                            src="images/jeans1.jpg"
+                            alt="Ripped skinny jeans"
+                            class="product-image"
+                        >
                     </figure>
 
                     <div class="product-info">
-                        <h2>Ripped Skinny Jeans</h2>
+                        <h3>Ripped Skinny Jeans</h3>
                         <p class="product-price">$29.99</p>
                     </div>
                 </article>
@@ -114,13 +125,15 @@
                 <!-- Product 2 -->
                 <article class="product-card">
                     <figure>
-                        <img src="images/jeans2.jpg"
-                             alt="Mega ripped jeans"
-                             class="product-image">
+                        <img
+                            src="images/jeans2.jpg"
+                            alt="Mega ripped jeans"
+                            class="product-image"
+                        >
                     </figure>
 
                     <div class="product-info">
-                        <h2>Mega Ripped Jeans</h2>
+                        <h3>Mega Ripped Jeans</h3>
                         <p class="product-price">$19.99</p>
                     </div>
                 </article>
@@ -128,9 +141,11 @@
                 <!-- Product 3 -->
                 <article class="product-card">
                     <figure>
-                        <img src="images/jeans3.jpg"
-                             alt="New mega ripped jeans"
-                             class="product-image">
+                        <img
+                            src="images/jeans3.jpg"
+                            alt="New mega ripped jeans"
+                            class="product-image"
+                        >
 
                         <span class="product-badge">New</span>
 
@@ -140,7 +155,7 @@
                     </figure>
 
                     <div class="product-info">
-                        <h2>Mega Ripped Jeans</h2>
+                        <h3>Mega Ripped Jeans</h3>
                         <p class="product-price">$19.99</p>
                     </div>
                 </article>
@@ -148,13 +163,15 @@
                 <!-- Product 4 -->
                 <article class="product-card">
                     <figure>
-                        <img src="images/jeans4.jpg"
-                             alt="Ripped skinny jeans"
-                             class="product-image">
+                        <img
+                            src="images/jeans4.jpg"
+                            alt="Ripped skinny jeans"
+                            class="product-image"
+                        >
                     </figure>
 
                     <div class="product-info">
-                        <h2>Ripped Skinny Jeans</h2>
+                        <h3>Ripped Skinny Jeans</h3>
                         <p class="product-price">$29.99</p>
                     </div>
                 </article>
@@ -162,13 +179,15 @@
                 <!-- Product 5 -->
                 <article class="product-card">
                     <figure>
-                        <img src="images/jeans5.jpg"
-                             alt="Washed skinny jeans"
-                             class="product-image">
+                        <img
+                            src="images/jeans5.jpg"
+                            alt="Washed skinny jeans"
+                            class="product-image"
+                        >
                     </figure>
 
                     <div class="product-info">
-                        <h2>Washed Skinny Jeans</h2>
+                        <h3>Washed Skinny Jeans</h3>
                         <p class="product-price">$20.50</p>
                     </div>
                 </article>
@@ -176,9 +195,11 @@
                 <!-- Product 6 -->
                 <article class="product-card">
                     <figure>
-                        <img src="images/jeans6.jpg"
-                             alt="Vintage skinny jeans on sale"
-                             class="product-image">
+                        <img
+                            src="images/jeans6.jpg"
+                            alt="Vintage skinny jeans on sale"
+                            class="product-image"
+                        >
 
                         <span class="product-badge">Sale</span>
 
@@ -188,7 +209,7 @@
                     </figure>
 
                     <div class="product-info">
-                        <h2>Vintage Skinny Jeans</h2>
+                        <h3>Vintage Skinny Jeans</h3>
                         <p class="product-price-raised">$14.99</p>
                     </div>
                 </article>
@@ -196,13 +217,15 @@
                 <!-- Product 7 -->
                 <article class="product-card">
                     <figure>
-                        <img src="images/jeans7.jpg"
-                             alt="Vintage skinny jeans"
-                             class="product-image">
+                        <img
+                            src="images/jeans7.jpg"
+                            alt="Vintage skinny jeans"
+                            class="product-image"
+                        >
                     </figure>
 
                     <div class="product-info">
-                        <h2>Vintage Skinny Jeans</h2>
+                        <h3>Vintage Skinny Jeans</h3>
                         <p class="product-price">$14.99</p>
                     </div>
                 </article>
@@ -210,13 +233,15 @@
                 <!-- Product 8 -->
                 <article class="product-card">
                     <figure>
-                        <img src="images/jeans8.jpg"
-                             alt="Ripped skinny jeans"
-                             class="product-image">
+                        <img
+                            src="images/jeans8.jpg"
+                            alt="Ripped skinny jeans"
+                            class="product-image"
+                        >
                     </figure>
 
                     <div class="product-info">
-                        <h2>Ripped Skinny Jeans</h2>
+                        <h3>Ripped Skinny Jeans</h3>
                         <p class="product-price">$24.99</p>
                     </div>
                 </article>
@@ -225,9 +250,13 @@
         </section>
 
         <!-- Newsletter Section -->
-        <section class="newsletter-section" id="newsletter">
+        <section
+            class="newsletter-section"
+            id="newsletter"
+            aria-labelledby="newsletter-title"
+        >
 
-            <h2>Subscribe</h2>
+            <h2 id="newsletter-title">Subscribe</h2>
 
             <p>To get special offers and updates on new arrivals.</p>
 
@@ -256,23 +285,23 @@
 
             <div class="footer-content">
 
-                <section class="footer-contact">
-                    <h2>Contact Us</h2>
+                <section class="footer-contact" aria-labelledby="contact-title">
+                    <h2 id="contact-title">Contact Us</h2>
                     <p>Questions? Get in touch with us.</p>
                     <p>Email: info@clothingstore.com</p>
                 </section>
 
-                <section class="footer-about">
-                    <h2>About</h2>
+                <section class="footer-about" aria-labelledby="about-title">
+                    <h2 id="about-title">About</h2>
                     <ul>
-                        <li><a href="#">About us</a></li>
+                        <li><a href="#top">About us</a></li>
                         <li><a href="#product">Our products</a></li>
                         <li><a href="#newsletter">Newsletter</a></li>
                     </ul>
                 </section>
 
-                <section class="footer-store">
-                    <h2>Store Information</h2>
+                <section class="footer-store" aria-labelledby="store-title">
+                    <h2 id="store-title">Store Information</h2>
                     <p>Fashion and style for everyone.</p>
                     <p>We bring you the latest clothing collections.</p>
                 </section>
